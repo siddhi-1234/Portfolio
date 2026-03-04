@@ -15,6 +15,7 @@ import {
   Layers,
   Menu,
   X,
+  Code2Icon,
 } from "lucide-react";
 
 const Background = () => (
@@ -111,10 +112,10 @@ const Hero = () => {
             <a href="/About" className="hover:text-white transition-all">
               About
             </a>
-            <a href="#" className="hover:text-white transition-all">
+            <a href="/Projects" className="hover:text-white transition-all">
               Projects
             </a>
-            <a href="#" className="hover:text-white transition-all">
+            <a href="/Skills" className="hover:text-white transition-all">
               Skills
             </a>
             <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg">
@@ -143,10 +144,10 @@ const Hero = () => {
               <a href="/About" className="text-lg font-bold">
                 About
               </a>
-              <a href="#" className="text-lg font-bold">
+              <a href="/Projects" className="text-lg font-bold">
                 Projects
               </a>
-              <a href="#" className="text-lg font-bold">
+              <a href="/Skills" className="text-lg font-bold">
                 Skills
               </a>
               <button className="bg-emerald-500 text-black py-4 rounded-xl font-black">
@@ -309,6 +310,12 @@ const Hero = () => {
               className="flex items-center gap-2 hover:text-white transition-all"
             >
               <Linkedin size={18} /> LINKEDIN
+            </a>
+            <a
+              href="https://leetcode.com/u/Siddhi_Patil27/"
+              className="flex items-center gap-2 hover:text-white transition-all"
+            >
+              <Code2Icon size={18} /> Leetcode
             </a>
           </div>
         </footer>

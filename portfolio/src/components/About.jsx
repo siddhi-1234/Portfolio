@@ -7,6 +7,12 @@ import {
   Terminal,
   Menu,
   X,
+  Mail,
+  TimerIcon,
+  SquaresIntersectIcon,
+  HandGrabIcon,
+  ComputerIcon,
+  Computer,
 } from "lucide-react";
 
 const About = () => {
@@ -20,7 +26,7 @@ const About = () => {
           <div className="w-9 h-9 bg-[#f97316]/10 border border-[#f97316]/20 rounded-lg flex items-center justify-center group-hover:bg-[#f97316]/20 transition-all">
             <Terminal size={18} className="text-[#f97316]" />
           </div>
-          <span className="font-black tracking-tighter text-xl uppercase italic">
+          <span className="font-black tracking-tighter text-xl uppercase italic text-white">
             Siddhi
           </span>
         </div>
@@ -33,10 +39,13 @@ const About = () => {
           <a href="/About" className="text-[#f97316]">
             About
           </a>
-          <a href="#" className="hover:text-white transition-colors">
+          <a href="/Projects" className="hover:text-white transition-colors">
             Projects
           </a>
-          <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg">
+          <a href="/Skills" className="hover:text-white transition-colors">
+            Skills
+          </a>
+          <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg text-white">
             GET IN TOUCH
           </button>
         </div>
@@ -65,8 +74,11 @@ const About = () => {
             <a href="/About" className="text-[#f97316] font-bold">
               About
             </a>
-            <a href="#" className="text-lg font-bold text-gray-400">
+            <a href="/Projects" className="text-lg font-bold text-gray-400">
               Projects
+            </a>
+            <a href="/Skills" className="text-lg font-bold text-gray-400">
+              Skills
             </a>
             <button className="bg-[#f97316] text-white py-4 rounded-xl font-black uppercase tracking-widest">
               GET IN TOUCH
@@ -77,28 +89,27 @@ const About = () => {
 
       {/* --- MAIN BENTO GRID --- */}
       <main className="max-w-6xl mx-auto px-6 md:px-10 grid grid-cols-1 md:grid-cols-12 gap-6 pt-4">
-        {/* Left: Main Profile Card (REDUCED HEIGHT & RESPONSIVE) */}
+        {/* Left: Main Profile Card */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="md:col-span-7 relative group overflow-hidden rounded-[2.5rem] bg-[#1c1917] border border-white/5 aspect-video md:aspect-auto md:h-[420px]"
+          className="md:col-span-7 relative group overflow-hidden rounded-[2.5rem] bg-[#1c1917] border border-white/5 h-[350px] md:h-[500px] w-full"
         >
           <img
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop"
-            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-            alt="Alex Chen"
+            src="Siddhii.jpeg"
+            className="absolute inset-0 w-full h-full object-cover object-top opacity-80 group-hover:scale-105 transition-transform duration-700"
+            alt="Profile"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#0d0a09] via-transparent to-transparent opacity-90" />
-
           <div className="absolute bottom-8 left-8 space-y-3 z-10 text-left">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#f97316]/10 border border-[#f97316]/20 text-[10px] font-bold text-[#f97316] uppercase tracking-widest">
               Available for work
             </div>
-            <h1 className="text-4xl md:text-5xl font-black tracking-tighter uppercase italic">
-              Alex Chen
+            <h1 className="text-4xl md:text-5xl font-black tracking-tighter uppercase italic text-white">
+              Siddhi Patil
             </h1>
             <p className="text-stone-400 text-sm font-medium">
-              Full Stack Developer & AI Enthusiast based in San Francisco
+              Full Stack Developer & AI/ML Enthusiast
             </p>
           </div>
         </motion.div>
@@ -117,7 +128,9 @@ const About = () => {
               <p className="text-[10px] uppercase tracking-widest text-stone-500 font-bold mb-1">
                 Degree
               </p>
-              <p className="font-bold text-lg">B.S. Computer Science</p>
+              <p className="font-bold text-lg text-white">
+                Btech Computer Science
+              </p>
             </div>
           </div>
           <div className="flex items-center gap-5">
@@ -128,7 +141,20 @@ const About = () => {
               <p className="text-[10px] uppercase tracking-widest text-stone-500 font-bold mb-1">
                 College
               </p>
-              <p className="font-bold text-lg">Stanford University</p>
+              <p className="font-bold text-lg text-white">
+                Walchand Institute of Technology, Solapur
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-5">
+            <div className="p-4 bg-stone-800 rounded-2xl text-[#f97316] shadow-lg shadow-[#f97316]/5">
+              <TimerIcon />
+            </div>
+            <div className="text-left">
+              <p className="text-[10px] uppercase tracking-widest text-stone-500 font-bold mb-1">
+                Current Year
+              </p>
+              <p className="font-bold text-lg text-white">3rd Year</p>
             </div>
           </div>
           <div className="flex items-center gap-5">
@@ -139,13 +165,66 @@ const About = () => {
               <p className="text-[10px] uppercase tracking-widest text-stone-500 font-bold mb-1">
                 Year
               </p>
-              <p className="font-bold text-lg">Senior, Class of 2024</p>
+              <p className="font-bold text-lg text-white">2027</p>
+            </div>
+          </div>
+          <div className="flex items-center gap-5">
+            <div className="p-4 bg-stone-800 rounded-2xl text-[#f97316] shadow-lg shadow-[#f97316]/5">
+              <Computer />
+            </div>
+            <div className="text-left">
+              <p className="text-[10px] uppercase tracking-widest text-stone-500 font-bold mb-1">
+                Technical Interests
+              </p>
+              <p className="font-bold text-lg text-white">
+                Full stack web development, AI/ML
+              </p>
+            </div>
+          </div>
+        </motion.div>
+      </main>
+
+      {/* --- FOOTER SECTION --- */}
+      <footer className="max-w-6xl mx-auto mt-20 px-6 md:px-10 pb-12">
+        {/* Short Introduction Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-10 py-12 border-t border-white/5"
+        >
+          <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-white uppercase italic tracking-tighter">
+              About!
+            </h2>
+            <p className="text-stone-400 text-sm leading-relaxed max-w-md">
+              I am a passionate software developer dedicated to building
+              high-performance web applications. With a focus on clean code and
+              intuitive user experiences, I transform complex problems into
+              elegant digital solutions. I am always eager to learn new
+              technologies and collaborate on innovative projects.
+            </p>
+          </div>
+          <div className="flex md:justify-end items-center">
+            <div className="flex flex-col gap-2">
+              <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-stone-500">
+                Drop a message
+              </p>
+              <a
+                href="mailto:hello@siddhi.com"
+                className="text-lg font-bold text-[#f97316] hover:underline flex items-center gap-2"
+              >
+                <Mail size={18} /> siddhip979@gmail.com
+              </a>
             </div>
           </div>
         </motion.div>
 
-        {/* Bottom Section... (remains same as your provided code) */}
-      </main>
+        {/* Bottom Social Links */}
+        <div className="flex flex-col md:flex-row justify-between items-center text-[10px] text-stone-600 font-bold uppercase tracking-widest gap-6 pt-8 border-t border-white/5">
+          <div>© 2027 Siddhi Patil. All rights reserved.</div>
+        </div>
+      </footer>
     </div>
   );
 };
