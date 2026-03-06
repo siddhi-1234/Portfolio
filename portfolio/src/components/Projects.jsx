@@ -497,28 +497,11 @@ const Projects = () => {
                   href="mailto:hello@siddhi.com"
                   className="text-base md:text-lg font-bold text-[#a855f7] hover:underline flex items-center gap-2 truncate max-w-full"
                 >
-                  <Mail size={18} className="shrink-0" /> hello@siddhi.com
+                  <Mail size={18} className="shrink-0" /> siddhip979@gmail.com
                 </a>
               </div>
             </div>
           </motion.div>
-
-          <div className="flex flex-col md:flex-row justify-between items-center text-[9px] md:text-[10px] font-bold uppercase tracking-widest text-gray-600 gap-6 md:gap-8 pt-8 border-t border-white/5">
-            <div className="text-center md:text-left">
-              © 2024 Developer Portfolio. Built with Space Grotesk.
-            </div>
-            <div className="flex gap-6 md:gap-8">
-              <a href="#" className="hover:text-white transition-colors">
-                Twitter
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                LinkedIn
-              </a>
-              <a href="#" className="hover:text-white transition-colors">
-                Email
-              </a>
-            </div>
-          </div>
         </footer>
 
         <ProjectModal
