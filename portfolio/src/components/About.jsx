@@ -45,6 +45,9 @@ const About = () => {
           <a href="/Skills" className="hover:text-white transition-colors">
             Skills
           </a>
+          <a href="/Experience" className="hover:text-white transition-colors">
+            Experience
+          </a>
           <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg text-white">
             GET IN TOUCH
           </button>
@@ -79,6 +82,9 @@ const About = () => {
             </a>
             <a href="/Skills" className="text-lg font-bold text-gray-400">
               Skills
+            </a>
+            <a href="/Experience" className="text-lg font-bold text-gray-400">
+              Experience
             </a>
             <button className="bg-[#f97316] text-white py-4 rounded-xl font-black uppercase tracking-widest">
               GET IN TOUCH

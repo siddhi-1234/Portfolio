@@ -3,30 +3,22 @@ import { motion, AnimatePresence } from "framer-motion";
 import {
   Code2,
   Server,
-  Cloud,
   Terminal,
-  Download,
   Database,
   Layout,
-  Box,
-  Lock,
-  Globe,
-  Menu, // Added for mobile nav
-  X, // Added for mobile nav
+  Menu,
+  X,
 } from "lucide-react";
 
-// Enhanced SkillCard with staggered entrance and hover effects
+// Interactive SkillCard component
 const SkillCard = ({ children, className, delay = 0 }) => (
   <motion.div
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true, margin: "-50px" }}
+    viewport={{ once: true }}
     transition={{ duration: 0.6, delay, ease: [0.22, 1, 0.36, 1] }}
-    whileHover={{
-      y: -8,
-      transition: { duration: 0.3, ease: "easeOut" },
-    }}
-    className={`bg-[#120d1d]/60 backdrop-blur-xl border border-white/10 rounded-[2rem] md:rounded-[2.5rem] p-6 md:p-8 shadow-2xl relative overflow-hidden group ${className}`}
+    whileHover={{ y: -8, transition: { duration: 0.3 } }}
+    className={`bg-[#120d1d]/60 backdrop-blur-xl border border-white/5 rounded-[2rem] p-6 md:p-8 shadow-2xl relative overflow-hidden group ${className}`}
   >
     <div className="absolute inset-0 bg-gradient-to-br from-[#a855f7]/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     <div className="relative z-10 h-full">{children}</div>
@@ -37,14 +29,14 @@ const SkillsPage = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#07050a] text-white selection:bg-[#a855f7]/30 font-sans overflow-x-hidden">
-      {/* --- BACKGROUND BLOBS --- */}
+    <div className="min-h-screen bg-[#07050a] text-white selection:bg-[#a855f7]/30 overflow-x-hidden font-sans">
+      {/* --- BACKGROUND SYSTEM --- */}
       <div className="fixed inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-[#a855f7]/10 blur-[120px] animate-pulse" />
-        <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[#6366f1]/10 blur-[120px]" />
+        <div className="absolute top-[-10%] right-[-10%] w-[60%] h-[60%] rounded-full bg-[#a855f7]/5 blur-[120px]" />
+        <div className="absolute bottom-[-10%] left-[-10%] w-[50%] h-[50%] rounded-full bg-[#6366f1]/5 blur-[120px]" />
       </div>
 
-      {/* --- NAVBAR (Same as Projects Page) --- */}
+      {/* --- MATCHING NAVBAR FROM PROJECTS PAGE --- */}
       <nav className="relative z-50 flex justify-between items-center px-6 md:px-12 py-8 md:py-10 max-w-7xl mx-auto">
         <div className="flex items-center gap-3 group cursor-pointer">
           <div className="w-10 h-10 bg-[#a855f7]/10 rounded-xl flex items-center justify-center border border-[#a855f7]/20 group-hover:bg-[#a855f7]/20 transition-all">
@@ -55,7 +47,6 @@ const SkillsPage = () => {
           </span>
         </div>
 
-        {/* Desktop Nav */}
         <div className="hidden lg:flex items-center gap-10 text-[11px] font-bold uppercase tracking-widest text-gray-500">
           <a href="/" className="hover:text-white transition-colors uppercase">
             Home
@@ -74,16 +65,18 @@ const SkillsPage = () => {
           </a>
           <a
             href="/Skills"
-            className="text-[#a855f7] transition-colors uppercase font-black tracking-[0.2em]"
+            className="text-[#a855f7] hover:text-[#b382e0] transition-colors uppercase font-black tracking-[0.2em]"
           >
             Skills
           </a>
-          <button className="bg-[#a855f7] text-white px-8 py-2.5 rounded-full font-black hover:bg-[#9333ea] transition-all shadow-lg shadow-[#a855f7]/20">
-            Resume
-          </button>
+          <a
+            href="/Experience"
+            className="hover:text-white transition-colors uppercase"
+          >
+            Experience
+          </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
           className="lg:hidden text-gray-400 p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -92,7 +85,7 @@ const SkillsPage = () => {
         </button>
       </nav>
 
-      {/* Mobile Navigation Overlay */}
+      {/* Mobile Menu */}
       <AnimatePresence>
         {isMenuOpen && (
           <motion.div
@@ -113,152 +106,173 @@ const SkillsPage = () => {
             <a href="/Skills" className="text-[#a855f7] font-bold">
               Skills
             </a>
-            <button className="bg-[#a855f7] text-white py-4 rounded-xl font-black uppercase tracking-widest">
-              GET IN TOUCH
-            </button>
+            <a href="/Experience" className="text-lg font-bold">
+              Experience
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
 
-      <div className="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 md:px-12 pb-20">
-        {/* --- HEADER --- */}
+      <div className="max-w-7xl mx-auto relative z-10 px-4 sm:px-6 md:px-12 pb-24">
+        {/* --- PAGE HEADER --- */}
         <header className="mb-16 md:mb-24 text-left max-w-3xl">
           <motion.h1
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter italic mb-6 leading-tight"
+            className="text-5xl sm:text-6xl md:text-8xl font-black uppercase tracking-tighter italic mb-6 leading-none"
           >
             Technical{" "}
             <span className="bg-gradient-to-r from-[#a855f7] via-[#818cf8] to-[#fb7185] bg-clip-text text-transparent">
               Proficiency
             </span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-            className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-2xl"
-          >
-            A dynamic bento-style showcase of my full-stack expertise,
-            specialized tools, and the technologies I'm currently mastering.
-          </motion.p>
+          <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed max-w-2xl">
+            A dynamic showcase of my full-stack expertise, specialized tools,
+            and the technologies I'm currently mastering.
+          </p>
         </header>
 
-        {/* --- BENTO GRID --- */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6 auto-rows-auto">
+        {/* --- SKILLS BENTO GRID --- */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6">
           {/* Frontend Section */}
-          <SkillCard
-            className="md:col-span-7 md:row-span-2 min-h-[340px]"
-            delay={0.1}
-          >
+          <SkillCard className="md:col-span-7 md:row-span-1 min-h-[280px]">
             <div className="flex justify-between items-start mb-12">
               <div>
-                <h3 className="text-3xl font-bold mb-2 tracking-tight">
-                  Frontend
-                </h3>
-                <p className="text-gray-500 text-sm font-medium">
+                <h3 className="text-3xl font-bold mb-2">Frontend</h3>
+                <p className="text-gray-500 text-sm">
                   Building immersive user interfaces
                 </p>
               </div>
-              <div className="p-3 bg-[#a855f7]/10 rounded-2xl">
-                <Layout className="text-[#a855f7]" size={28} />
-              </div>
+              <Layout className="text-[#a855f7]" size={32} />
             </div>
 
-            <div className="grid grid-cols-2 xs:grid-cols-4 gap-8 md:mt-16">
+            {/* FIXED: Responsive Grid Columns */}
+            <div className="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 gap-4 mt-8 justify-items-center">
               {[
-                { name: "JS (ES6+)", icon: "JS", color: "text-yellow-400" },
-                { name: "React", icon: "JS", color: "text-blue-400" },
-                { name: "Tailwind", icon: "CSS", color: "text-cyan-400" },
-                { name: "Next.js", icon: "HTML", color: "text-orange-400" },
-              ].map((skill, i) => (
-                <motion.div
+                { name: "JS ", color: "text-yellow-400" },
+                { name: "React", color: "text-blue-400" },
+                { name: "Tailwind CSS", color: "text-cyan-400" },
+                { name: "HTML", color: "text-orange-400" },
+                { name: "Bootstrap", color: "text-purple-400" },
+              ].map((s, i) => (
+                <div
                   key={i}
-                  whileHover={{ scale: 1.05 }}
-                  className="text-center flex flex-col items-center group/icon"
+                  className="text-center group/skill w-full max-w-[80px]"
                 >
                   <div
-                    className={`text-sm font-black mb-4 ${skill.color} p-4 bg-white/5 rounded-2xl w-full aspect-square flex items-center justify-center border border-white/5 group-hover/icon:border-white/20 transition-colors`}
+                    className={`text-sm font-black mb-3 ${s.color} bg-white/5 rounded-2xl aspect-square flex items-center justify-center border border-white/5 group-hover/skill:border-white/20 transition-all`}
                   >
-                    {skill.icon}
+                    {s.name.split(" ")[0]}
                   </div>
-                  <div className="text-[10px] font-black uppercase tracking-widest text-gray-500 group-hover/icon:text-white transition-colors">
-                    {skill.name}
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </SkillCard>
-
-          {/* Core Languages Section */}
-          <SkillCard
-            className="md:col-span-5 md:row-span-3 min-h-[400px]"
-            delay={0.2}
-          >
-            <div className="p-3 bg-[#a855f7]/10 rounded-2xl w-fit mb-8">
-              <Code2 className="text-[#a855f7]" size={24} />
-            </div>
-            <h3 className="text-3xl font-bold mb-10 tracking-tight">
-              Core Languages
-            </h3>
-            <div className="space-y-8">
-              {[
-                { name: "TypeScript", color: "bg-blue-500", percent: 90 },
-                { name: "Python", color: "bg-yellow-500", percent: 85 },
-                { name: "Java", color: "bg-red-500", percent: 75 },
-                { name: "C++", color: "bg-blue-600", percent: 70 },
-              ].map((lang, i) => (
-                <div key={i} className="group/lang cursor-default">
-                  <div className="flex items-center justify-between mb-3">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-2 h-2 rounded-full ${lang.color}`} />
-                      <span className="text-lg font-bold text-gray-300 group-hover/lang:text-white transition-colors">
-                        {lang.name}
-                      </span>
-                    </div>
-                  </div>
-                  <div className="w-full h-1 bg-white/5 rounded-full overflow-hidden">
-                    <motion.div
-                      initial={{ width: 0 }}
-                      whileInView={{ width: `${lang.percent}%` }}
-                      transition={{ duration: 1, delay: 0.5 + i * 0.1 }}
-                      className={`h-full ${lang.color} opacity-60`}
-                    />
+                  <div className="text-[9px] font-black uppercase tracking-widest text-gray-500 truncate">
+                    {s.name}
                   </div>
                 </div>
               ))}
             </div>
           </SkillCard>
 
-          {/* Remaining cards (Cloud Systems, Backend, Tools) follow the same SkillCard structure... */}
+          {/* Core Languages Section */}
+          <SkillCard className="md:col-span-5 md:row-span-2">
+            <div className="flex gap-2 mb-8">
+              <div className="text-[#a855f7]">
+                <Code2 size={24} />
+              </div>
+            </div>
+            <h3 className="text-3xl font-bold mb-10">Core Languages</h3>
+            <div className="space-y-8">
+              {[
+                { name: "C", color: "bg-blue-500" },
+                { name: "Python", color: "bg-yellow-500" },
+                { name: "Java", color: "bg-red-500" },
+                { name: "C++", color: "bg-blue-600" },
+              ].map((lang, i) => (
+                <div
+                  key={i}
+                  className="flex items-center gap-4 group/lang cursor-default"
+                >
+                  <div
+                    className={`w-2 h-2 rounded-full ${lang.color} shadow-lg`}
+                  />
+                  <span className="text-xl font-bold text-gray-300 group-hover/lang:text-white transition-colors">
+                    {lang.name}
+                  </span>
+                </div>
+              ))}
+            </div>
+            <div className="mt-24 pt-8 border-t border-white/5 italic text-gray-600 text-[10px] uppercase tracking-widest">
+              Optimizing for performance & scalability
+            </div>
+          </SkillCard>
+
+          {/* Backend & Cloud Section */}
+          <SkillCard className="md:col-span-7 md:row-span-1">
+            <h3 className="text-3xl font-bold mb-2">Backend</h3>
+            <p className="text-gray-500 text-sm mb-12">
+              Architecting secure and resilient server-side systems.
+            </p>
+            <div className="grid grid-cols-1 xs:grid-cols-2 gap-8">
+              {[
+                {
+                  title: "Node.js / Express",
+                  sub: "RESTful APIs",
+                  icon: <Server size={20} />,
+                },
+                {
+                  title: "MongoDB & SQL",
+                  sub: "Data Modeling",
+                  icon: <Database size={20} />,
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-4 items-center group/item">
+                  <div className="p-4 bg-white/5 rounded-2xl text-[#a855f7] group-hover/item:bg-[#a855f7]/10 transition-all">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <p className="text-sm font-bold text-gray-200">
+                      {item.title}
+                    </p>
+                    <p className="text-[10px] text-gray-500 uppercase font-black">
+                      {item.sub}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </SkillCard>
+
+          {/* Developer Tools Section */}
+          {/* Developer Tools Section - Updated to name tools instead of icons */}
+          <SkillCard className="md:col-span-7 md:row-span-1 flex flex-col items-start gap-6">
+            <div>
+              <h3 className="text-2xl font-bold mb-1 tracking-tight">
+                Developer Tools
+              </h3>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mt-4">
+              {["Git & GitHub", "VS Code", "Postman", "Firebase"].map(
+                (tool, i) => (
+                  <motion.div
+                    key={i}
+                    whileHover={{ y: -5, scale: 1.02 }}
+                    className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-center hover:bg-[#a855f7]/10 hover:border-[#a855f7]/30 transition-all cursor-default"
+                  >
+                    <span className="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white">
+                      {tool}
+                    </span>
+                  </motion.div>
+                ),
+              )}
+            </div>
+          </SkillCard>
         </div>
 
-        {/* --- CTA --- */}
+        {/* --- CTA SECTION --- */}
         <footer className="mt-32 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-          >
-            <p className="text-[11px] font-black uppercase tracking-[0.5em] text-gray-500 mb-10 italic">
-              Looking for a specific stack?
-            </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="group relative inline-flex items-center gap-4 px-14 py-6 bg-[#a855f7] rounded-full overflow-hidden transition-all shadow-2xl shadow-purple-500/20"
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-[#a855f7] via-[#9333ea] to-[#6366f1] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <span className="relative font-black uppercase tracking-[0.2em] text-xs">
-                Download Full Resume
-              </span>
-              <Download
-                size={20}
-                className="relative group-hover:translate-y-1 transition-transform"
-              />
-            </motion.button>
-          </motion.div>
+          <p className="text-[11px] font-black uppercase tracking-[0.1em] text-gray-600 mb-10 italic">
+            Let's Build Something Amazing Together! Looking forward to
+            connecting and creating innovative solutions.
+          </p>
         </footer>
       </div>
     </div>

@@ -4,7 +4,6 @@ import {
   Github,
   ExternalLink,
   Terminal,
-  Code2,
   X,
   PlayCircle,
   Eye,
@@ -411,6 +410,12 @@ const Projects = () => {
               className="hover:text-white transition-colors uppercase"
             >
               Skills
+            </a>
+            <a
+              href="/Experience"
+              className="hover:text-white transition-colors uppercase"
+            >
+              Experience
             </a>
           </div>
           {/* Mobile indicator for nav could go here */}

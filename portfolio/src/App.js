@@ -3,6 +3,7 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Projects from "./components/Projects";
 import SkillsPage from "./components/SkillsPage";
+import Experience from "./components/Experience";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route path="/About" element={<About />} />
         <Route path="/Projects" element={<Projects />} />
         <Route path="/Skills" element={<SkillsPage />} />
+        <Route path="/Experience" element={<Experience />} />
       </Routes>
     </Router>
   );
