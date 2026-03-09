@@ -4,10 +4,7 @@ import {
   Terminal,
   Menu,
   X,
-  Briefcase,
   Calendar,
-  MapPin,
-  ExternalLink,
   ChevronRight,
   Sparkles,
 } from "lucide-react";
@@ -45,40 +42,22 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: "Google India",
-      logoText: "GP",
-      role: "Frontend Developer Intern",
-      period: "Jun 2025 - Aug 2025",
-      desc: "Developed responsive web applications using React and TypeScript. Optimized component performance resulting in 40% faster load times for Workspace features.",
-      skills: ["React", "TypeScript", "Next.js", "GraphQL"],
+      company: "Webstack Academy",
+      logoText: "WA",
+      role: "MERN Stack Developer Intern",
+      period: "Dec 2025- Jan 2026",
+      desc: "Developed a full-stack music streaming web application using React, Node.js, and MongoDB. Implemented user authentication and real-time features",
+      skills: ["React", "Tailwind CSS", "Node.js", "MongoDB"],
       color: "from-blue-500 to-emerald-500",
     },
     {
-      company: "Microsoft India",
-      logoText: "MS",
-      role: "Full Stack Developer Intern",
-      period: "Jan 2025 - May 2025",
-      desc: "Built scalable RESTful APIs using .NET Core and deployed microservices on Azure. Implemented CI/CD pipelines reducing deployment time by 60%.",
-      skills: [".NET Core", "Azure", "Docker", "SQL Server"],
+      company: "SGI Solutions",
+      logoText: "SGI",
+      role: "Industrial Trainee",
+      period: "June 2023 - July 2023",
+      desc: "Trained on HTML,CSS,Bootstrap,VB.NET,SQL Server. Gained hands-on experience in web development ",
+      skills: ["HTML", "CSS", "Bootstrap", "VB.NET", "SQL Server"],
       color: "from-[#f093fb] to-[#f5576c]",
-    },
-    {
-      company: "Amazon India",
-      logoText: "AM",
-      role: "SDE Intern",
-      period: "Summer 2024",
-      desc: "Designed and implemented distributed systems for high-traffic e-commerce platform. Worked on AWS Lambda functions processing 1M+ requests daily.",
-      skills: ["AWS", "Python", "DynamoDB", "Kubernetes"],
-      color: "from-[#667eea] to-[#764ba2]",
-    },
-    {
-      company: "TCS Digital",
-      logoText: "TS",
-      role: "Web Developer",
-      period: "2023 - 2024",
-      desc: "Delivered enterprise web applications for Fortune 500 clients. Led frontend development team of 5 developers. Implemented pixel-perfect responsive designs.",
-      skills: ["Vue.js", "Node.js", "MongoDB", "Tailwind CSS"],
-      color: "from-orange-400 to-rose-400",
     },
   ];
 
@@ -120,8 +99,14 @@ const Experience = () => {
             Skills
           </a>
           <a
+            href="/Achievements"
+            className="hover:text-white transition-colors uppercase"
+          >
+            Achievements
+          </a>
+          <a
             href="/Experience"
-            className="text-[#a855f7] transition-colors uppercase font-black tracking-[0.2em]"
+            className="text-[#a855f7] hover:text-[#ae77e0] transition-colors uppercase font-black tracking-[0.2em]"
           >
             Experience
           </a>
@@ -252,7 +237,7 @@ const Experience = () => {
               innovative projects and grow with a professional team.
             </p>
             <a
-              href="mailto:hello@siddhi.com"
+              href="mailto:siddhip979@gmail.com"
               className="inline-flex items-center gap-3 px-10 py-5 bg-[#a855f7] rounded-full font-black uppercase tracking-widest text-xs hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-[#a855f7]/20"
             >
               Get In Touch <ChevronRight size={18} />

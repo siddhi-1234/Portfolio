@@ -9,9 +9,6 @@ import {
   X,
   Mail,
   TimerIcon,
-  SquaresIntersectIcon,
-  HandGrabIcon,
-  ComputerIcon,
   Computer,
 } from "lucide-react";
 
@@ -47,6 +44,12 @@ const About = () => {
           </a>
           <a href="/Experience" className="hover:text-white transition-colors">
             Experience
+          </a>
+          <a
+            href="/Achievements"
+            className="hover:text-white transition-colors"
+          >
+            Achievements
           </a>
           <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg text-white">
             GET IN TOUCH
@@ -85,6 +88,9 @@ const About = () => {
             </a>
             <a href="/Experience" className="text-lg font-bold text-gray-400">
               Experience
+            </a>
+            <a href="/Achievements" className="text-lg font-bold text-gray-400">
+              Achievements
             </a>
             <button className="bg-[#f97316] text-white py-4 rounded-xl font-black uppercase tracking-widest">
               GET IN TOUCH

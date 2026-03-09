@@ -121,6 +121,9 @@ const Hero = () => {
             <a href="/Experience" className="hover:text-white transition-all">
               Experience
             </a>
+            <a href="/Achievements" className="hover:text-white transition-all">
+              Achievements
+            </a>
             <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg">
               GET IN TOUCH
             </button>
@@ -155,6 +158,9 @@ const Hero = () => {
               </a>
               <a href="/Experience" className="text-lg font-bold">
                 Experience
+              </a>
+              <a href="/Achievements" className="text-lg font-bold">
+                Achievements
               </a>
               <button className="bg-emerald-500 text-black py-4 rounded-xl font-black">
                 GET IN TOUCH

@@ -417,6 +417,12 @@ const Projects = () => {
             >
               Experience
             </a>
+            <a
+              href="/Achievements"
+              className="hover:text-white transition-colors uppercase"
+            >
+              Achievements
+            </a>
           </div>
           {/* Mobile indicator for nav could go here */}
         </nav>

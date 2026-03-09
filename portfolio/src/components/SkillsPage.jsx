@@ -75,6 +75,12 @@ const SkillsPage = () => {
           >
             Experience
           </a>
+          <a
+            href="/Achievements"
+            className="hover:text-white transition-colors uppercase"
+          >
+            Achievements
+          </a>
         </div>
 
         <button
@@ -108,6 +114,9 @@ const SkillsPage = () => {
             </a>
             <a href="/Experience" className="text-lg font-bold">
               Experience
+            </a>
+            <a href="/Achievements" className="text-lg font-bold">
+              Achievements
             </a>
           </motion.div>
         )}
@@ -214,7 +223,7 @@ const SkillsPage = () => {
             <div className="grid grid-cols-1 xs:grid-cols-2 gap-8">
               {[
                 {
-                  title: "Node.js / Express",
+                  title: "Node.js / Express (Currently Learning)",
                   sub: "RESTful APIs",
                   icon: <Server size={20} />,
                 },
