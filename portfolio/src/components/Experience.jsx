@@ -110,6 +110,12 @@ const Experience = () => {
           >
             Experience
           </a>
+          <a
+            href="/Contact"
+            className="hover:text-white transition-colors uppercase"
+          >
+            Contact
+          </a>
         </div>
 
         <button
@@ -135,9 +141,21 @@ const Experience = () => {
             <a href="/Experience" className="text-[#a855f7] font-bold">
               Experience
             </a>
-            <button className="bg-[#a855f7] text-white py-4 rounded-xl font-black uppercase tracking-widest">
-              Contact Me
-            </button>
+            <a href="/About" className="text-[#a855f7] font-bold">
+              About
+            </a>
+            <a href="/Projects" className="text-[#a855f7] font-bold">
+              Projects
+            </a>
+            <a href="/Skills" className="text-[#a855f7] font-bold">
+              Skills
+            </a>
+            <a href="/Achievements" className="text-[#a855f7] font-bold">
+              Achievements
+            </a>
+            <a href="/Contact" className="text-[#a855f7] font-bold">
+              Contact
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

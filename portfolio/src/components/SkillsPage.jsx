@@ -81,6 +81,12 @@ const SkillsPage = () => {
           >
             Achievements
           </a>
+          <a
+            href="/Contact"
+            className="hover:text-white transition-colors uppercase"
+          >
+            Contacts
+          </a>
         </div>
 
         <button
@@ -117,6 +123,9 @@ const SkillsPage = () => {
             </a>
             <a href="/Achievements" className="text-lg font-bold">
               Achievements
+            </a>
+            <a href="/Contact" className="text-lg font-bold">
+              Contacts
             </a>
           </motion.div>
         )}

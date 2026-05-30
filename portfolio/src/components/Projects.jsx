@@ -423,6 +423,12 @@ const Projects = () => {
             >
               Achievements
             </a>
+            <a
+              href="/Contact"
+              className="hover:text-white transition-colors uppercase"
+            >
+              Contacts
+            </a>
           </div>
           {/* Mobile indicator for nav could go here */}
         </nav>

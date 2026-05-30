@@ -51,9 +51,9 @@ const About = () => {
           >
             Achievements
           </a>
-          <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg text-white">
-            GET IN TOUCH
-          </button>
+          <a href="/Contact" className="hover:text-white transition-colors">
+            Contact
+          </a>
         </div>
 
         {/* Mobile Menu Button */}
@@ -92,9 +92,9 @@ const About = () => {
             <a href="/Achievements" className="text-lg font-bold text-gray-400">
               Achievements
             </a>
-            <button className="bg-[#f97316] text-white py-4 rounded-xl font-black uppercase tracking-widest">
-              GET IN TOUCH
-            </button>
+            <a href="/Contact" className="text-lg font-bold text-gray-400">
+              Contact
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

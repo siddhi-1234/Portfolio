@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Typewriter from "typewriter-effect";
+import { Link } from "react-router-dom";
 import {
   Download,
   AtSign,
@@ -124,9 +125,9 @@ const Hero = () => {
             <a href="/Achievements" className="hover:text-white transition-all">
               Achievements
             </a>
-            <button className="bg-white/5 border border-white/10 px-8 py-3 rounded-full hover:bg-white/10 transition-all font-bold text-[10px] tracking-widest border-b-white/20 shadow-lg">
-              GET IN TOUCH
-            </button>
+            <a href="/Contact" className="hover:text-white transition-all">
+              Contacts
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -162,9 +163,9 @@ const Hero = () => {
               <a href="/Achievements" className="text-lg font-bold">
                 Achievements
               </a>
-              <button className="bg-emerald-500 text-black py-4 rounded-xl font-black">
-                GET IN TOUCH
-              </button>
+              <a href="/Contact" className="text-lg font-bold">
+                Contacts
+              </a>
             </motion.div>
           )}
         </AnimatePresence>
@@ -207,9 +208,12 @@ const Hero = () => {
                 />
               </div>
               <p className="text-gray-400 max-w-lg mx-auto lg:mx-0 leading-relaxed text-base md:text-lg font-medium">
-                Engineering robust digital ecosystems through clean architecture
-                and creative problem-solving. Currently bridging the gap between
-                hardware logic and modern web interfaces.
+                Passionate about turning code into impactful solutions, I’m a Computer Science student with a curious mind and a drive for innovation.
+
+                I thrive on challenges that push my skills further.  I’m constantly learning and evolving.
+
+                I am pursuing BTECH degree in Computer science from Walchand Institute of Technology Solapur.
+                Beyond the classroom, I actively engage in online courses, open-source contributions, and tech communities to stay ahead of the curve.
               </p>
             </div>
 
@@ -221,9 +225,13 @@ const Hero = () => {
               >
                 Download Resume <Download size={20} strokeWidth={3} />
               </a>
-              <button className="w-full sm:w-auto bg-white/5 border border-white/10 px-10 py-4 md:py-5 rounded-full font-black flex items-center justify-center gap-3 hover:bg-white/10 transition-all text-white border-t-white/10 shadow-lg backdrop-blur-md">
+              <Link
+                to="/Contact"
+                className="w-full sm:w-auto bg-white/5 border border-white/10 px-10 py-4 md:py-5 rounded-full font-black flex items-center justify-center gap-3 hover:bg-white/10 transition-all text-white border-t-white/10 shadow-lg backdrop-blur-md"
+              >
                 Contact Me <AtSign size={20} strokeWidth={3} />
-              </button>
+              </Link>
+
             </div>
           </div>
 
