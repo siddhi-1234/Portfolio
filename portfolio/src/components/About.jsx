@@ -166,7 +166,7 @@ const About = () => {
               <p className="text-[10px] uppercase tracking-widest text-stone-500 font-bold mb-1">
                 Current Year
               </p>
-              <p className="font-bold text-lg text-white">3rd Year</p>
+              <p className="font-bold text-lg text-white">Final Year</p>
             </div>
           </div>
           <div className="flex items-center gap-5">

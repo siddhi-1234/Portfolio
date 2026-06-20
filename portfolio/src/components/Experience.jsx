@@ -59,6 +59,15 @@ const Experience = () => {
       skills: ["HTML", "CSS", "Bootstrap", "VB.NET", "SQL Server"],
       color: "from-[#f093fb] to-[#f5576c]",
     },
+    {
+      company: "Elite Coders",
+      logoText: "ECSoC",
+      role: "Web Developer",
+      period: "Currently working",
+      desc: "Working as web developer in Elite Coders, an open source community.",
+      skills: ["HTML", "CSS", "JavaScript", "MERN"],
+      color: "from-blue-500 to-emerald-500",
+    },
   ];
 
   return (

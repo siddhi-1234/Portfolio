@@ -170,6 +170,7 @@ const SkillsPage = () => {
                 { name: "JS ", color: "text-yellow-400" },
                 { name: "React", color: "text-blue-400" },
                 { name: "Tailwind CSS", color: "text-cyan-400" },
+                { name: "CSS", color: "text-green-300" },
                 { name: "HTML", color: "text-orange-400" },
                 { name: "Bootstrap", color: "text-purple-400" },
               ].map((s, i) => (
@@ -232,7 +233,7 @@ const SkillsPage = () => {
             <div className="grid grid-cols-1 xs:grid-cols-2 gap-8">
               {[
                 {
-                  title: "Node.js / Express (Currently Learning)",
+                  title: "Node.js / Express",
                   sub: "RESTful APIs",
                   icon: <Server size={20} />,
                 },
@@ -268,19 +269,23 @@ const SkillsPage = () => {
               </h3>
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 w-full mt-4">
-              {["Git & GitHub", "VS Code", "Postman", "Firebase"].map(
-                (tool, i) => (
-                  <motion.div
-                    key={i}
-                    whileHover={{ y: -5, scale: 1.02 }}
-                    className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-center hover:bg-[#a855f7]/10 hover:border-[#a855f7]/30 transition-all cursor-default"
-                  >
-                    <span className="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white">
-                      {tool}
-                    </span>
-                  </motion.div>
-                ),
-              )}
+              {[
+                "Git & GitHub",
+                "VS Code",
+                "Postman",
+                "Firebase",
+                "Antigravity",
+              ].map((tool, i) => (
+                <motion.div
+                  key={i}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="px-4 py-3 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-center hover:bg-[#a855f7]/10 hover:border-[#a855f7]/30 transition-all cursor-default"
+                >
+                  <span className="text-[11px] font-black uppercase tracking-widest text-gray-400 group-hover:text-white">
+                    {tool}
+                  </span>
+                </motion.div>
+              ))}
             </div>
           </SkillCard>
         </div>
